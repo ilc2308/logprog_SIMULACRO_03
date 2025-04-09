@@ -11,7 +11,7 @@ total_encargos=1000
 categorias=['Tuberías','Acabados','Cimentación','Estructura','Techos']
 min_cantidad=0
 max_cantidad=10
-#Lista para almacenar los encargos
+#Diccionario para almacenar los encargos
 encargos={}
 
 #Generación de las ordenes

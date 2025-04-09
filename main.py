@@ -22,9 +22,9 @@ for num_encargo in range(total_encargos+1):
     encargos.append(encargo)
     
 #Función para las ordenes especiales
-def calcular_total_ordenes(lista_encargos,criterio):
+def calcular_total_ordenes(dicc_encargos,criterio):
     encargos_totales=0
-    for encargo in lista_encargos:
+    for encargo in dicc_encargos:
         valores=list(encargo.values())
         if criterio =='nulas' and valores.count(0)>=2:
             encargos_totales+=1

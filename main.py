@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Apr  9 10:38:18 2025
+Created on Wed Apr  9 15:02:44 2025
 
 @author: B15S301est
 """
@@ -19,12 +19,12 @@ for num_encargo in range(total_encargos+1):
     encargo={} #Diccionario para un solo encargo
     for categoria in categorias:
         encargo[categoria]=random.randint(min_cantidad,max_cantidad)
-    encargos.append(encargo)
+    encargos[f'encargo_{num_encargo}']=encargo
     
 #Función para las ordenes especiales
 def calcular_total_ordenes(dicc_encargos,criterio):
     encargos_totales=0
-    for encargo in dicc_encargos:
+    for encargo in dicc_encargos.values():
         valores=list(encargo.values())
         if criterio =='nulas' and valores.count(0)>=2:
             encargos_totales+=1
